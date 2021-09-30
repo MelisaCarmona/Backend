@@ -1,0 +1,21 @@
+[{
+        "producto": "higienico",
+        "valor": 5000
+    },
+    {
+        "producto": "jabon",
+        "valor": 2000
+    },
+    {
+        "producto": "shampoo",
+        "valor": 15000
+    },
+    {
+        "producto": "acondicionador",
+        "valor": 28000
+    },
+    {
+        "producto": "crema",
+        "valor": 8000
+    }
+]
