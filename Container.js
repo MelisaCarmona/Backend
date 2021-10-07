@@ -19,6 +19,7 @@ class Container {
 
     save(products) {
 
+
         let container_file = fs.readFileSync(this.file, this.format);
         let array_product = "";
 
@@ -37,6 +38,19 @@ class Container {
             }
         });
 
+    }
+
+    getProduct(id) {
+        let container_file = fs.readFileSync(this.file, this.format);
+        let array_product = "";
+
+        if (container_file != "") {
+            array_product = JSON.parse(container_file);
+        } else {
+            array_product = [];
+        }
+        const find = array_product.find(element => element.id = id);
+        return JSON.stringify(find);
     }
 
 }

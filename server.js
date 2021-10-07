@@ -7,14 +7,17 @@ const app = express();
 /** Port of departure */
 const PORT = 8080;
 
-/** Class Container */
+/** Other class*/
 const container = require('./Container');
 const container_class = new container('./productos.txt');
+const productRoute = require('./routes/product')
 
 /** Welcome greeting */
 app.get("/", (request, response, next) => {
     response.send("<h1>Bienvenido!!!</h1>");
 });
+
+app.use('/api/product', productRoute);
 
 /** List products in an array */
 app.get("/productos", (request, response, next) => {
